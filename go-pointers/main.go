@@ -17,6 +17,11 @@ func (e *Engineer) UpdateAge() {
 
 func (e Engineer) UpdateName() {
 	e.Name = "new name"
+	fmt.Println(e)
+}
+
+func UpdateAge(e *Engineer) {
+	e.Age += 1
 }
 
 func main() {
@@ -34,6 +39,9 @@ func main() {
 
 	// value reciever uses copy of address
 	paul.UpdateName()
+	fmt.Println(paul)
+
+	UpdateAge(paul)
 	fmt.Println(paul)
 }
 
